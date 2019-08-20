@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements ProfileAdapter.ActionListener {
 
@@ -21,6 +24,15 @@ public class MainActivity extends AppCompatActivity implements ProfileAdapter.Ac
 
         List<ProfileModel> list = ProfileData.getListData();
         setList(list);
+
+        CircleImageView imageView = findViewById(R.id.gambar_akun);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),AboutMeActivity.class));
+            }
+        });
+
 
     }
 

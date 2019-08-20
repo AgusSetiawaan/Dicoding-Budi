@@ -21,6 +21,8 @@
 
         <activity android:name=".ProfileDetail"
             android:screenOrientation="portrait"/>
+        <activity android:name=".AboutMeActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 
